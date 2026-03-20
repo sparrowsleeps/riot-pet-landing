@@ -100,10 +100,13 @@
  
   <p class="description">Bold gear for pets with attitude. Something worth the wait is coming.</p>
  
-  <div style="visibility:hidden;height:0;overflow:hidden;">
+  <div>
     <div class="form-row">
-      <input type="email" id="email" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
-      <button id="btn" onclick="handleSubmit()">Notify Me</button>
+      <form action="https://formcarry.com/s/kJx_psbYZGf" id="my-formcarry" method="POST" accept-charset="UTF-8" enctype="multipart/form-data"></form>
+        <input type="email" id="email" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
+        <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+        <button id="btn" onclick="handleSubmit()">Notify Me</button>
+      </form>
     </div>
     <p class="note">No spam. Just the signal when we're live.</p>
   </div>
