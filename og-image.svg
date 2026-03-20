@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <text
+    x="600"
+    y="370"
+    text-anchor="middle"
+    font-family="'Bebas Neue', Impact, sans-serif"
+    font-size="200"
+    fill="#f2ede8"
+    letter-spacing="10"
+  >RIOT<tspan fill="#e8232a">.</tspan>PET</text>
+</svg>
