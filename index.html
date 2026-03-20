@@ -57,40 +57,52 @@
       flex-direction: column;
     }
 
-    @media (min-width: 380px) {
-      .form-row, form { flex-direction: row; }
-      .form-row input[type="email"] { border-right: none; border-bottom: 2px solid #2e2e2e; }
-    }
-
     .form-row input[type="email"] {
       flex: 1;
       background: #1a1a1a;
-      border: 2px solid #2e2e2e;
+      border: 2px solid #ffffff;
       color: #f2ede8;
       font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
       padding: 0.85rem 1rem;
       outline: none;
       transition: border-color 0.2s;
+      border-bottom: none;
     }
     .form-row input[type="email"]:focus { border-color: #e8232a; }
-    .form-row input::placeholder { color: #444; }
- 
+    .form-row input::placeholder { color: #777; }
+    
+    @media (min-width: 380px) {
+      .form-row, form { flex-direction: row; }
+      .form-row input[type="email"] { border-right: none !important; border-bottom: 2px solid #ffffff; }
+    }
+
+    .form-row input[type="email"]:focus + button {
+      border-color: #e8232a;
+      color: #ffffff;
+    }
+
     .form-row button {
       background: #e8232a;
       color: #0a0a0a;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1rem;
       letter-spacing: 0.12em;
-      border: 2px solid #e8232a;
+      border: 2px solid #ffffff;
       padding: 0.85rem 1.4rem;
       cursor: pointer;
       transition: background 0.15s;
       white-space: nowrap;
+      width: 100%;
+      max-width: 400px;
+      
     }
-    .form-row button:hover { background: #f5d233; border-color: #f5d233; }
+    .form-row button:hover { background: #a1080d; }
     .form-row button:disabled { opacity: 0.5; cursor: default; }
- 
+    @media (min-width: 380px) {
+      .form-row button { width: auto; }
+    }
+
     .note {
       margin-top: 0.75rem;
       font-size: 0.6rem;
@@ -105,13 +117,13 @@
  
   <h1 class="wordmark">Riot<em>.</em>Pet</h1>
  
-  <p class="description">Bold gear for pets with attitude. Something worth the wait is coming.</p>
+  <p class="description">Bold gear for the pet who always sides with you. Something worth the wait is coming.</p>
  
   <div>
     <div class="form-row">
       <form action="https://formcarry.com/s/kJx_psbYZGf" id="my-formcarry" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
-        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
         <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" aria-label="Email address" />
         <button id="btn" onclick="handleSubmit(event)">Notify Me</button>
       </form>
     </div>
